@@ -39,7 +39,7 @@ for model in "${models[@]}"; do
         output_file="${output_dir}/DataSource_$(basename "${image_directory%/}")_${model}__${system_message}__${pre_messages}.json"
 
 
-        cmd="python -u code_files/test_api.py --image_directory \"$image_directory\" --model \"$model\" --system_message \"$system_message\" --pre_messages \"$pre_messages\" --output_file \"$output_file\" --post_messages \"$post_message\" --kwargs default"
+        cmd="python -u code_files/run_model.py --image_directory \"$image_directory\" --model \"$model\" --system_message \"$system_message\" --pre_messages \"$pre_messages\" --output_file \"$output_file\" --post_messages \"$post_message\" --kwargs default"
 
         # Echo the command (for debugging/logging)
         echo "$cmd"
